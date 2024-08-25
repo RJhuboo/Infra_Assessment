@@ -39,7 +39,7 @@ im_size = image.shape
 num_cols = int(im_size[1]// (l*0.75)) # define the number of hexagons in height
 num_rows = int(im_size[0]//h) # define the number of hexagons in width
 result = np.zeros_like(image) # Initilization of the result image
-hex_mask =  Mask_hexagon(long_radius) # Initilization of the hexagon mask
+hex_mask =  Mask_hexagon(long_radius,h,l) # Initilization of the hexagon mask
 hex_means = [] # Initialization of the mean intensity values list
 
 # Main 
@@ -61,7 +61,10 @@ for row in range(num_rows):
         
         # Compute the mean intensity value.
         mean_value = cv2.mean(masked_hex, mask=hex_mask)[0]
-        hex_means.append(mean_value)
+        
+        center_x = x_offset + l//2
+        center_y = y_offset + h//2
+        hex_means.append({'X_position': center_x, "Y_position": center_y, "Intensity value": mean_value})
         
         # Fill the hexagon with the mean intensity value
         filled_hex = np.full_like(masked_hex, int(mean_value))
@@ -71,7 +74,10 @@ for row in range(num_rows):
         non_zero_mask = hex_with_intensity > 0
         result[y_offset:y_offset + int(h),x_offset:x_offset + int(l)][non_zero_mask] = hex_with_intensity[non_zero_mask]
         
-        
-    
+df = pd.DataFrame(hex_means)     
+print(df)
+
+df.to_csv('Intensities.csv')    
+
 cv2.imshow("modified image", result)
 cv2.waitKey(0)
