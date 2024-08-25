@@ -4,6 +4,7 @@ This project is part of the INFRA assessment. This project aims at transforming 
 In other words, we create an image where pixels are hexagons. The code take in input an image and a scaling factor and output an image and the mean intensity values for each hexagons. 
 
 <img src="image_test.jpg" width="400" />
+Input image that is converted afterward in grayscale.
 <img src="Output/result.jpg" width="400" />
 
 ## Requirements
