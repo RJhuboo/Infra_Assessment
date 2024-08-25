@@ -4,13 +4,13 @@ This project is part of the INFRA assessment. It aims to transform a grayscale i
 
 <p align="center">
   <img src="image_test.jpg" width="400" />
+  Figure 1: Input image that is converted afterward in grayscale.
 </p>
-Figure 1: Input image that is converted afterward in grayscale.
 
 <p align="center">
   <img src="Output/result.jpg" width="400" />
+  Figure 2: Output image
 </p>
-Figure 2: Output image
 
 ## Requirements
 
