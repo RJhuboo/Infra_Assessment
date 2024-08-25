@@ -1,7 +1,9 @@
-# Infra_assignment
+# Infra_assessment
 
-This project is part of the INFRA assignement. This project aim at transforming a grayscale image into a set of hexagons where each hexagons is colored with the mean intensity value of the image within the hexagon. 
-In other words, we create a image where pixels are hexagons. The code take in input an image and a scaling factor and output an image and the mean intensity values for each hexagons. 
+This project is part of the INFRA assessment. This project aims at transforming a grayscale image into a set of hexagons where each hexagons is colored with the mean intensity value of the image within the hexagon (see picture below). 
+In other words, we create an image where pixels are hexagons. The code take in input an image and a scaling factor and output an image and the mean intensity values for each hexagons. 
+
+<img src="Output/result.jpg" width="800" />
 
 ## Requirements
 
@@ -19,11 +21,9 @@ To run the code, you can use the following line:
 ```
 py main.py --filename image_test.jpg --long_radius 10
 ```
-
+Please change the ```py``` following your device, e.g. ```py3```,```python```...
 Two images are available for testing the code : "image_test.jpg" and "cameraman.jpg".
 
 ## What is the output ? 
 
 The code outputs an image that is saved in the Output directory. It also save the file intensities.csv that contains the mean intensity values of each hexagons as well as the coordinates of their center (X_position,Y_position).
-
-<img src="Output/result.jpg" width="800" />
