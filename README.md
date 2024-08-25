@@ -25,7 +25,7 @@ pip install requirements.txt
 
 ## How to use
 
-The code is called main.py. Just run main.py to use the code. Two parameters can be tuned : filename and long_radius. The first one represents the path and name of the image and the second is the radius of the circle that encompass the hexagon.
+The code is called main.py. Just run main.py to use the code. Two parameters can be tuned : filename and long_radius. The first one represents the path and name of the image and the second is the radius of the circle that encompasses the hexagon.
 The higher is the long_radius value and the bigger will be the hexagons.
 To run the code, you can use the following line: 
 
