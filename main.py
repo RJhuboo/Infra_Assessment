@@ -113,9 +113,10 @@ if __name__ == '__main__':
     print(df)
 
     # Save the dataframe into a csv file
-    df.to_csv('Intensities.csv')    
+    df.to_csv('Output/Intensities.csv')    
 
     # Dispaly the result
+    cv2.imshow("original image", image )
     cv2.imshow("modified image", result)
     cv2.waitKey(0)
 
