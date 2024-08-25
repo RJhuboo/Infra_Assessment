@@ -86,6 +86,8 @@ if __name__ == '__main__':
     # Main 
     for row in range(num_rows):
         for col in range(num_cols):
+          
+            # Position of the hexagon
             even = col %2 # Define if the column is even or odd
             x_offset = int(col*hexagon.l*0.75) # x position
             y_offset = int(row*hexagon.h + even*(hexagon.h//2)) # y position with an offset depending in the column parity
