@@ -2,6 +2,17 @@ import numpy as np
 import cv2
 import math
 import pandas as pd
+import argparse
+
+# Arguments of the program
+parser = argparse.ArgumentParser(
+                    prog='Hexagonized image',
+                    description='Transform an image into a set of hexagons',
+                    epilog='')
+parser.add_argument('--filename',default="image_test.jpg",type=str,help="Image filename and path")           # positional argument
+parser.add_argument('--long_radius', default=10,type=int,help="The radius of the hexagon (must be an integer)")      # option that takes a value
+
+args = parser.parse_args()
 
 class Hexagon:
     # Hexagon object
@@ -49,11 +60,11 @@ class Hexagon:
 if __name__ == '__main__':
      
     # Scaling parameter
-    long_radius = 10 # Scaling factor: Choose the radius of the circle encompassing the hexagon.
+    long_radius = args.long_radius # Scaling factor: Choose the radius of the circle encompassing the hexagon.
 
 
     # Image reading
-    filename = "image test.jpg" # Path and filename of the image file
+    filename = args.filename # Path and filename of the image file
     image = cv2.imread(filename,cv2.IMREAD_GRAYSCALE) # Read and Convert the image in Grayscale
 
     # Get image size
@@ -108,4 +119,5 @@ if __name__ == '__main__':
     cv2.imshow("modified image", result)
     cv2.waitKey(0)
 
+    # Save image in the output directory
     cv2.imwrite("Output/result.jpg",result)
