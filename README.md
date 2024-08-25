@@ -12,7 +12,7 @@ Figure 2: Output image
 
 ## Requirements
 
-This code use opencv, numpy, pandas, math, argparse. All the required packaged are presented in the requirement.txt that you can download with the following line in your terminal
+This code uses opencv, numpy, pandas, math, argparse. All the required packages are presented in the requirement.txt that you can download with the following line in your terminal
 ```
 pip install requirements.txt
 ```
@@ -31,4 +31,4 @@ Two images are available for testing the code : "image_test.jpg" and "cameraman.
 
 ## What is the output ? 
 
-The code outputs an image that is saved in the Output directory. It also save the file intensities.csv that contains the mean intensity values of each hexagons as well as the coordinates of their center (X_position,Y_position).
+The code outputs an image that is saved in the Output directory. It also save the file intensities.csv, inside the Output folder, that contains the mean intensity values of each hexagons as well as the coordinates of their center (X_position,Y_position).
