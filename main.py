@@ -9,8 +9,8 @@ parser = argparse.ArgumentParser(
                     prog='Hexagonized image',
                     description='Transform an image into a set of hexagons',
                     epilog='')
-parser.add_argument('--filename',default="image_test.jpg",type=str,help="Image filename and path")           # positional argument
-parser.add_argument('--long_radius', default=10,type=int,help="The radius of the hexagon (must be an integer)")      # option that takes a value
+parser.add_argument('--filename',default="image_test.jpg",type=str,help="Image filename and path") 
+parser.add_argument('--long_radius', default=10,type=int,help="The radius of the hexagon (must be an integer)")      
 
 args = parser.parse_args()
 
