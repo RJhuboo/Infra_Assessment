@@ -2,11 +2,14 @@
 
 This project is part of the INFRA assessment. It aims to transform a grayscale image into a set of hexagons, where each hexagon is colored with the mean intensity value of the image within that hexagon (see the pictures below). In other words, we create an image where the pixels are hexagons. The code takes an image and a scaling factor as input, and outputs an image and the mean intensity values for each hexagon.
 
-<img src="image_test.jpg" width="400" />
+<p align="center">
+  <img src="image_test.jpg" width="400" />
+</p>
 Figure 1: Input image that is converted afterward in grayscale.
 
-
-<img src="Output/result.jpg" width="400" />
+<p align="center">
+  <img src="Output/result.jpg" width="400" />
+</p>
 Figure 2: Output image
 
 ## Requirements
