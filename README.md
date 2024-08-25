@@ -1,7 +1,6 @@
 # Infra_assessment
 
-This project is part of the INFRA assessment. This project aims at transforming a grayscale image into a set of hexagons where each hexagons is colored with the mean intensity value of the image within the hexagon (see picture below). 
-In other words, we create an image where pixels are hexagons. The code take in input an image and a scaling factor and output an image and the mean intensity values for each hexagons. 
+This project is part of the INFRA assessment. It aims to transform a grayscale image into a set of hexagons, where each hexagon is colored with the mean intensity value of the image within that hexagon (see the picture below). In other words, we create an image where the pixels are hexagons. The code takes an image and a scaling factor as input, and outputs an image and the mean intensity values for each hexagon.
 
 <img src="image_test.jpg" width="400" />
 Figure 1: Input image that is converted afterward in grayscale.
@@ -12,7 +11,7 @@ Figure 2: Output image
 
 ## Requirements
 
-This code uses opencv, numpy, pandas, math, argparse. All the required packages are presented in the requirement.txt that you can download with the following line in your terminal
+This code uses opencv, numpy, pandas, math, argparse. All the required packages are presented in the requirement.txt that you can download using the following line in your terminal
 ```
 pip install requirements.txt
 ```
