@@ -4,6 +4,9 @@ import math
 import pandas as pd
 import argparse
 
+''' This code divides an image into hexagons where each hexagon is colored by the mean intensity value of the image
+within this hexagon.'''
+
 # Arguments of the program
 parser = argparse.ArgumentParser(
                     prog='Hexagonized image',
@@ -14,8 +17,9 @@ parser.add_argument('--long_radius', default=10,type=int,help="The radius of the
 
 args = parser.parse_args()
 
+
+''' Hexagon object '''
 class Hexagon:
-    # Hexagon object
     def __init__(self,radius):
         self.radius = radius
         self.h = int(radius*math.sqrt(3)) # The height of an hexagon
@@ -23,12 +27,12 @@ class Hexagon:
         self.mask = self.Mask_hexagon()
         self.mean_value = None
         
+    ''' Mask_hexagon(): This function creates a mask of an hexagon within a h*l image dimension, where h
+            is the height of the hexagon, and l is the horizontal length of the hexagon.
+            The mask is filled with 255, representing the hexagon, and 0, representing the rest of the image.
+            The mask is then used to calculate the mean of the masked hexagon pixels. '''
     def Mask_hexagon(self):
         
-        # This function creates a mask of an hexagon within a h*l image dimension, where h
-        # is the height of the hexagon, and l is the horizontal length of the hexagon.
-        # The mask is filled with 255, representing the hexagon, and 0, representing the rest of the image.
-        # The mask is then used to calculate the mean of the masked hexagon pixels.
         
         mask = np.zeros((int(self.h),int(self.l)), dtype=np.uint8)
         hex_points = []
@@ -41,9 +45,9 @@ class Hexagon:
         cv2.fillConvexPoly(mask, points, 255)
         return mask
 
+    ''' apply_mask(): This function apply the mask into the image at the position (x_offset,y_offset) '''
     def apply_mask(self, image,x_offset,y_offset):
         
-        # This function apply the mask into the image at the position (x_offset,y_offset).
         
         # Crop the image 
         hex_cut = image[y_offset:y_offset + int(self.h),x_offset:x_offset + int(self.l)]
@@ -56,7 +60,7 @@ class Hexagon:
         return self.mean_value
 
 
-
+''' Main function '''
 if __name__ == '__main__':
      
     # Scaling parameter
