@@ -6,6 +6,7 @@ In other words, we create an image where pixels are hexagons. The code take in i
 <img src="image_test.jpg" width="400" />
 Input image that is converted afterward in grayscale.
 <img src="Output/result.jpg" width="400" />
+Output image
 
 ## Requirements
 
