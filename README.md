@@ -30,4 +30,4 @@ Two images are available for testing the code : "image_test.jpg" and "cameraman.
 
 ## What is the output ? 
 
-The code outputs an image that is saved in the Output directory. It also save the file intensities.csv, inside the Output folder, that contains the mean intensity values of each hexagons as well as the coordinates of their center (X_position,Y_position).
+The code outputs an image that is saved in the Output directory. It also save the file intensities.csv, inside the Output folder, that contains the mean intensity values of each hexagon as well as the coordinates of their center (X_position,Y_position). In this way the csv file gives a mapping from the center position of hexagons to their mean intensity value.
