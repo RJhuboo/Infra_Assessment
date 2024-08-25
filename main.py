@@ -109,7 +109,7 @@ if __name__ == '__main__':
             hex_with_intensity = cv2.bitwise_and(filled_hex, filled_hex, mask=hexagon.mask)
             
             # Paste the final hexagon within the result image.
-            non_zero_mask = hex_with_intensity > 0
+            non_zero_mask = hex_with_intensity > 0 # This line avoids the superposition of two hexagons leading to black regions
             result[y_offset:y_offset + int(hexagon.h),x_offset:x_offset + int(hexagon.l)][non_zero_mask] = hex_with_intensity[non_zero_mask]
             
     # Create the dataframe
