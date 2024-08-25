@@ -26,7 +26,7 @@ To run the code, you can use the following line:
 ```
 py main.py --filename image_test.jpg --long_radius 10
 ```
-Please change the ```py``` following your device, e.g. ```py3```,```python```...
+Please change the ```py``` depending on your configuration (e.g. ```py3```,```python```, ...)
 Two images are available for testing the code : "image_test.jpg" and "cameraman.jpg".
 
 ## What is the output ? 
